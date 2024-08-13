@@ -9,9 +9,8 @@ This guide provides a step-by-step process for setting up a Django project, incl
 4. [Running the Server](#running-the-server)
 5. [MVT Architecture](#mvt-architecture)
 6. [Geeky Steps](#geeky-steps)
-7. [Static Files](#static-files)
-8. [Quick Summary](#quick-summary)
-9. [Step by Step Guide](#step-by-step-guide)
+7. [Quick Summary](#quick-summary)
+8. [Step by Step Guide](#step-by-step-guide)
 
    
 ## Setup and Installation
