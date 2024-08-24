@@ -188,6 +188,8 @@ python manage.py runserver
 
 
 ## Step by Step Guide
+- Create a Virtual-Environment: python -m venv env_name
+- Activate Virtual-Environment: env_name\Scripts\activate
 - Create project: django-admin startproject myproject
 - Navigate to the project directory: cd myproject
 - Start a new app in the project: python manage.py startapp course
