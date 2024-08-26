@@ -150,17 +150,7 @@ python manage.py runserver
         # ...
         }]
     ```
-- Use in Template files:
-    ```python
-    - First Load Static Files
-    - Reference Static Files
-    
-    {% load static %}
 
-    <link href="{% static 'myapp/css/styles.css' %}">
-    <img src="{% static 'myapp/images/logo.png' %}" alt="Site Logo">
-    <script src="{% static 'myapp/js/scripts.js' %}"></script>
-    ```
 
 ### 7) Static Files
 - Create static folder in project root
@@ -177,7 +167,19 @@ python manage.py runserver
     # STATIC_ROOT is the directory where static files will be collected when you run `collectstatic`
     STATIC_ROOT = BASE_DIR / "staticfiles"
     ```
+- Use in Template files:
+    ```python
+    - First Load Static Files
+    - Reference Static Files
     
+    {% load static %}
+
+    <link href="{% static 'myapp/css/styles.css' %}">
+    <img src="{% static 'myapp/images/logo.png' %}" alt="Site Logo">
+    <script src="{% static 'myapp/js/scripts.js' %}"></script>
+    ```
+
+        
 ## Quick Summary
 - Create project: django-admin startproject myproject
 - Create app: python manage.py startapp course | django-admin startapp course
