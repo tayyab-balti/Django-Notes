@@ -199,13 +199,15 @@ python manage.py runserver
 - Start a new app in the project: python manage.py startapp course
 - Add/Install Applications to Django Project (course and fees to myproject) using settings.py INSTALLED_APPS
 - Create templates folder inside each application and inside Root Project Folder
-- Check 'APP_DIRS' : True in settings.py
 - Add templates directory which is inside Root Project Folder, in settings.py
+- Create Separate Directory for each application, inside templates directory
+- Create template files inside templates/application_folder/directory which is inside Root Project Folder
+  ------------
 - Create folder inside app/templates directory for template files
 - Create template files inside app/templates/folder
 - Create template files inside templates folder which is inside Root Project Folder
-- Add templates directory in settings.py. 
 - Create static folder inside Root Project Folder
+- Add static directory which is inside Root Project Folder, in settings.py
 - Create css, js, images, videos, etc inside static folder
 - Create static files inside css, js, images, videos, etc folder
 - Add static directory in settings.py. 
