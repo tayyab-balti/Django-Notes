@@ -178,7 +178,7 @@ python manage.py runserver
     
 ## Quick Summary
 - Create project: django-admin startproject myproject
-- Create app: python manage.py startapp course
+- Create app: python manage.py startapp course | django-admin startapp course
 - Configure app in settings.py
 - Set up templates and static files
 - Create views in views.py
