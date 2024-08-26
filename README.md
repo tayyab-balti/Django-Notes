@@ -143,25 +143,12 @@ python manage.py runserver
 - Configure settings.py: 
 
     ```python
+    TEMPLATE_DIR = BASE_DIR / 'templates'
     TEMPLATES = [{
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         # ...
         }]
-    ```
-
-
-### 7) Static Files
-- Create static folder in project root
-- Configure settings.py:
-    ```python
-    STATIC_URL = '/static/'
-
-    # Optional: If you want to define where static files are collected during deployment
-    
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static"),
-    ]
     ```
 - Use in Template files:
     ```python
@@ -175,6 +162,21 @@ python manage.py runserver
     <script src="{% static 'myapp/js/scripts.js' %}"></script>
     ```
 
+### 7) Static Files
+- Create static folder in project root
+- Configure settings.py:
+
+    ```python
+    # STATIC_URL is the base URL location for serving static files
+    STATIC_URL = 'static/'
+    
+    # STATICFILES_DIRS is a list of folders where Django will also look for static files
+    STATIC_DIR = BASE_DIR / 'static'
+    STATICFILES_DIRS = [STATIC_DIR]
+    
+    # STATIC_ROOT is the directory where static files will be collected when you run `collectstatic`
+    STATIC_ROOT = BASE_DIR / "staticfiles"
+    ```
     
 ## Quick Summary
 - Create project: django-admin startproject myproject
@@ -200,9 +202,11 @@ python manage.py runserver
 - Create folder inside app/templates directory for template files
 - Create template files inside app/templates/folder
 - Create template files inside templates folder which is inside Root Project Folder
+- Add templates in settings.py. 
 - Create static folder inside Root Project Folder
 - Create css, js, images, videos, etc inside static folder
 - Create static files inside css, js, images, videos, etc folder
+- Add static in settings.py. 
 - Write View Function inside views.py file
 - Define url for view function of application using urls.py file
 - Write Template file code
