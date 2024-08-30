@@ -158,7 +158,7 @@ python manage.py runserver
 
     ```python
     # STATIC_URL is the base URL location for serving static files
-    STATIC_URL = 'static/'
+    STATIC_URL = '/static/'
     
     # STATICFILES_DIRS is a list of folders where Django will also look for static files
     STATIC_DIR = BASE_DIR / 'static'
