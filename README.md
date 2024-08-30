@@ -175,7 +175,7 @@ python manage.py runserver
     {% load static %}
 
     <link href="{% static 'myapp/css/styles.css' %}">
-    <img src="{% static 'myapp/images/logo.png' %}" alt="Site Logo">
+    <img src="{% get_static_prefix %}myapp/images/logo.png" alt="Site Logo">
     <script src="{% static 'myapp/js/scripts.js' %}"></script>
     ```
 
