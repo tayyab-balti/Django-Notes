@@ -176,7 +176,6 @@ python manage.py runserver
       {% load static %}
       <img src="{% static 'images/logo.png' %}" alt="Site Logo">
       <!-- <img src="{% get_static_prefix %}images/logo.png" alt="Site Logo">  -->
-      <!-- Reference to a JavaScript file -->
       <script src="{% static 'js/scripts.js' %}"></script>
       </body>
       </html>
