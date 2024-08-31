@@ -182,10 +182,9 @@ python manage.py runserver
 
 ## Django Template Inheritance
 - Template inheritance in Django allows you to build a base template that can be reused across multiple pages, promoting DRY (Don't Repeat Yourself) principles.
-
-```python
 - Sample code for creating a base template (base.html).
 
+```python
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,7 +209,23 @@ python manage.py runserver
 </body>
 </html>
 ```
-        
+
+## Extending a Base Template
+- Explanation of how child templates extend the base template.
+- Sample code for creating Child Templates (home.html) extending the base template.
+
+```python
+{% extends 'base.html' %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the content specific to the Home Page.</p>
+{% endblock %}
+```
+
+   
 ## Quick Summary
 - Create project: django-admin startproject myproject
 - Create app: python manage.py startapp course | django-admin startapp course
