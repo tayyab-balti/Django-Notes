@@ -207,8 +207,9 @@ python manage.py runserver
 - Create template files inside app/templates/app/folder
 - Create static folder inside Root Project Folder
 - Add static directory which is inside Root Project Folder, in settings.py
-- Create css, js, images, videos, etc inside static folder
+- Create css, js, images, videos, etc folders inside static folder
 - Create static files inside css, js, images, videos, etc folder
+- Create static folder & files inside Application directory as like templates
 - Write View Function inside views.py file
 - Define url for view function of application using urls.py file
 - Write Template file code
