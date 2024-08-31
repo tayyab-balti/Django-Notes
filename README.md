@@ -179,6 +179,37 @@ python manage.py runserver
     <script src="{% static 'myapp/js/scripts.js' %}"></script>
     ```
 
+
+## Django Template Inheritance
+- Template inheritance in Django allows you to build a base template that can be reused across multiple pages, promoting DRY (Don't Repeat Yourself) principles.
+
+```python
+- Sample code for creating a base template (base.html).
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} My Website {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Header Content -->
+    </header>
+    <nav>
+        <!-- Navigation -->
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <!-- Footer Content -->
+    </footer>
+</body>
+</html>
+```
         
 ## Quick Summary
 - Create project: django-admin startproject myproject
