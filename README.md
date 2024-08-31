@@ -182,7 +182,7 @@ python manage.py runserver
       ```
 
 
-## Template Inheritance with Static
+## Template Inheritance with Static File
 - Template inheritance in Django allows you to build a base template that can be reused across multiple pages, promoting DRY (Don't Repeat Yourself) principles.
 - Sample code for creating a base template (base.html).
 
