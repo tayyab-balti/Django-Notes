@@ -193,7 +193,7 @@ python manage.py runserver
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} My Website {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 </head>
 <body>
     <header>
@@ -212,8 +212,7 @@ python manage.py runserver
 </html>
 ```
 
-## Extending a Base Template
-- Explanation of how child templates extend the base template.
+### Extending a Base Template
 - Sample code for creating Child Templates (home.html) extending the base template.
 
 ```python
