@@ -174,30 +174,10 @@ python manage.py runserver
     
     <!-- base.html -->
       {% load static %}
-      
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>{% block title %} My Website {% endblock %}</title>
-      
-          <!-- Reference to a CSS file -->
-          <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-      </head>
-      <body>
-          <header>
-              <!-- Header Content -->
-              <img src="{% static 'images/logo.png' %}" alt="Site Logo">
-              <img src="{% get_static_prefix %}images/logo.png" alt="Site Logo">
-          </header>
-          
-          <div class="content">
-              {% block content %}{% endblock %}
-          </div>
-      
-          <!-- Reference to a JavaScript file -->
-          <script src="{% static 'js/scripts.js' %}"></script>
+      <img src="{% static 'images/logo.png' %}" alt="Site Logo">
+      <!-- <img src="{% get_static_prefix %}images/logo.png" alt="Site Logo">  -->
+      <!-- Reference to a JavaScript file -->
+      <script src="{% static 'js/scripts.js' %}"></script>
       </body>
       </html>
       ```
