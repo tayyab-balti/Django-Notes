@@ -182,7 +182,7 @@ python manage.py runserver
       ```
 
 
-## Django Template Inheritance
+## Template Inheritance with Static
 - Template inheritance in Django allows you to build a base template that can be reused across multiple pages, promoting DRY (Don't Repeat Yourself) principles.
 - Sample code for creating a base template (base.html).
 
@@ -232,6 +232,47 @@ python manage.py runserver
     <h1>Welcome to the Home Page</h1>
     <p>This is the content specific to the Home Page.</p>
 {% endblock %}
+```
+
+
+## Using Bootstrap via CDN (Content Delivery Network)
+- This method is simpler and requires no additional setup for serving static files, but it requires an internet connection.
+1) Load Static Tag
+2) Add Bootstrap CDN Links in the base.html
+   
+```python
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} My Website {% endblock %}</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    {% block corecss %}
+        <!-- Additional CSS -->
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <!-- Header Content -->
+    </header>
+    
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- jQuery and Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
 ```
 
    
