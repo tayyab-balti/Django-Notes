@@ -188,12 +188,13 @@ python manage.py runserver
 
 ```python
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block corecss %} <link rel="stylesheet" href="{% static 'core/css/styles.css' %}"> {% endblock corecss %}
     <title>{% block title %} My Website {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 </head>
 <body>
     <header>
@@ -217,6 +218,13 @@ python manage.py runserver
 
 ```python
 {% extends 'base.html' %}
+
+{% block corecss %}
+    <!-- Including the base stylesheets first -->
+    {{ block.super }}  
+    <!-- Adding additional styles specific to this page -->
+    <link rel="stylesheet" href="{% static 'course/css/styles.css' %}">
+{% endblock corecss %}
 
 {% block title %} Home Page {% endblock %}
 
