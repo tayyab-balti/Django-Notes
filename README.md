@@ -287,6 +287,11 @@ python manage.py runserver
 2. Use `url` template tag to create dynamic URLs in templates:
    ```html
    <a href="{% url 'example' %}">Go to Example</a>
+
+   <!-- Or you may write it as
+   {% url 'example' as ex %}
+   <a href="{{ex}}">Go to Example</a>
+   -->
    ```
    
 3. Ensure your view functions in `views.py` match the URL patterns.
