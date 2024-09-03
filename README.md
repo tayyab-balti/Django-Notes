@@ -91,7 +91,8 @@ python manage.py runserver
         python manage.py startapp course
 
 ### 3) Configure App in Project Settings
-- Edit settings.py:
+- Edit `settings.py`:
+
     ```python
     INSTALLED_APPS = [
         # ...
@@ -101,7 +102,7 @@ python manage.py runserver
 
 
 ### 4) Create Views 
-- In views.py:
+- In `views.py`:
     
     ```python
     from django.http import HttpResponse
@@ -116,7 +117,7 @@ python manage.py runserver
 
 ### 5) Configure URLs
 - Create urls.py file in app folder
-- In app's urls.py:
+- In `app's` urls.py:
 
     ```python
     from django.urls import path
@@ -127,7 +128,7 @@ python manage.py runserver
         path('learnpy/', views.learn_python),
     ]
     ```
-- In project's urls.py: 
+- In `project's` urls.py: 
 
     ```python 
     from django.urls import path, include
@@ -140,7 +141,7 @@ python manage.py runserver
 
 ### 6) Set Up Templates 
 - Create templates folders in app and project root
-- Configure settings.py: 
+- Configure `settings.py`: 
 
     ```python
     TEMPLATE_DIR = BASE_DIR / 'templates'
@@ -154,7 +155,7 @@ python manage.py runserver
 
 ### 7) Static Files
 - Create static folder in project root
-- Configure settings.py:
+- Configure `settings.py`:
 
     ```python
     # STATIC_URL is the base URL location for serving static files
@@ -167,7 +168,7 @@ python manage.py runserver
     # STATIC_ROOT is the directory where static files will be collected when you run `collectstatic`
     STATIC_ROOT = BASE_DIR / "staticfiles"
     ```
-- Use in Template files:
+- Use in `Template files`:
     ```python
     - First Load Static Files
     - Reference Static Files
@@ -184,7 +185,7 @@ python manage.py runserver
 
 ## Template Inheritance with Static File
 - Template inheritance in Django allows you to build a base template that can be reused across multiple pages, promoting DRY (Don't Repeat Yourself) principles.
-- Sample code for creating a base template (base.html).
+- Sample code for creating a base template `base.html`.
 
 ```python
 <!DOCTYPE html>
@@ -214,7 +215,7 @@ python manage.py runserver
 ```
 
 ### Extending a Base Template
-- Sample code for creating Child Templates (home.html) extending the base template.
+- Sample code for creating Child Templates `home.html` extending the base template.
 
 ```python
 {% extends 'base.html' %}
@@ -238,7 +239,7 @@ python manage.py runserver
 ## Using Bootstrap via CDN (Content Delivery Network)
 - This method is simpler and requires no additional setup for serving static files, but it requires an internet connection.
 1) Load Static Tag
-2) Add Bootstrap CDN Links in the base.html
+2) Add Bootstrap CDN Links in the `base.html`
    
 ```python
 {% load static %}
@@ -288,7 +289,7 @@ python manage.py runserver
    <a href="{% url 'example' %}">Go to Example</a>
    ```
    
-3. Ensure your view functions in 'views.py' match the URL patterns.
+3. Ensure your view functions in `views.py` match the URL patterns.
    ```python
    def example_view(request):
       return render(request, 'example.html')
