@@ -300,6 +300,31 @@ python manage.py runserver
       return render(request, 'example.html')
    ```
 
+
+## Django Include Tag: Templates within Templates
+
+- The include tag allows you to include the contents of one template inside another template. This is useful for reusing common sections of your website, such as headers, footers, or navigation bars.
+
+1. Basic `syntax` of the include tag:
+   ```html
+   {% include "template_name.html" %}
+   ```
+
+2. Include with variables from the `parent` template:
+   ```html
+   {% include "name_snippet.html" with person="Jane" greeting="Hello" %}
+   ```
+
+3. Only pass `specified variables` to the included template:
+   ```html
+   {% include "name_snippet.html" with greeting="Hi" only %}
+   ```
+
+4. Include template with `dynamic name` using a `variable`:
+   ```html
+   {% include template_name %}
+   ```
+
    
 ## Quick Summary
 - Create project: django-admin startproject myproject
