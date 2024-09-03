@@ -41,12 +41,12 @@ python manage.py startapp course
     - `wsgi.py`: WSGI entry-point (web servers gateway interface)
       
   - `course/`: Application directory
-  - `migrations/`: Database migrations
-  - `models.py`: Database models (classes in OOP)
-  - `views.py`: Request/response logic (functions)
-  - `admin.py`: Admin interface config
-  - `apps.py`: App configuration
-  - `tests.py`: Test definitions
+     - `migrations/`: Database migrations
+     - `models.py`: Database models (classes in OOP)
+     - `views.py`: Request/response logic (functions)
+     - `admin.py`: Admin interface config
+     - `apps.py`: App configuration
+     - `tests.py`: Test definitions
 
 
 ## Migrations
