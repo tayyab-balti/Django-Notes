@@ -275,6 +275,25 @@ python manage.py runserver
 </html>
 ```
 
+
+## Django URLs and Hyperlinks
+
+1. Define URL patterns in `urls.py` using `path()` function:
+   ```python
+   path('example/', views.example_view, name='example')
+   ```
+
+2. Use `url` template tag to create dynamic URLs in templates:
+   ```html
+   <a href="{% url 'example' %}">Go to Example</a>
+   ```
+   
+3. Ensure your view functions in 'views.py' match the URL patterns.
+   ```python
+   def example_view(request):
+      return render(request, 'example.html')
+   ```
+
    
 ## Quick Summary
 - Create project: django-admin startproject myproject
